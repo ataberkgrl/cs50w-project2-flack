@@ -1,6 +1,8 @@
 # CS50W-Project 2
 
-Chat application web app project for CS50W course which is offered by Harvard at edX. "static" folder contains the stylesheet and the script of the web app. My personal touch is not a feature but an algorithm which calculates the local time of every client on their browser according to the server-side time of the message. So every user sees the message time on their timezone. You can check the algorithm in the script file as a function named "calculateClientTimeOfMessage".
+Chat application web app project for CS50W course which is offered by Harvard at edX. My personal touch is not a feature but an algorithm which calculates the local time of every client on their browser according to the server-side time of the message. So every user sees the message time on their timezone. You can check the algorithm in the script file as a function named "calculateClientTimeOfMessage".
+
+**This project doesn't use any database. Datas are stored in application memory.**
 
 You can visit the website from [here](https://cs50wproject2ataberk.herokuapp.com/)
 

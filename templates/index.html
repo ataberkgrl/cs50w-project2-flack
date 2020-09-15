@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js" charset="UTF-8"></script>
+    <title>Flack</title>
+</head>
+<body>
+    <div id="namewindow">
+        <h2>Enter your name!</h2>
+        <button id="namewclose"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+        <input type="text" id="newusername">
+        <p id="warning">You must enter a valid name!</p>
+        <button type="button" id="submitnamebtn" class="btn btn-success">Submit</button>
+    </div>
+    <div id="addroomwindow">
+        <h2>Enter new room name!</h2>
+        <button id="roomwclose"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+        <input type="text" id="newroomname">
+        <p id="warning">You must enter a valid room name!</p>
+        <button type="button" id="submitroombtn" class="btn btn-success">Submit</button>
+    </div>
+    <div id="mainwindow">
+        <div id="backgroundrect"></div>
+        <div id="mainscreen">
+            <div id="mainbanner">
+                <p id="welcome">Welcome,&nbsp;<a id="namelink"></a>!</p>
+                <div id="createroom">
+                    <a id="addroombtn"><img id="createicon" src="/static/img/create-icon.png"></a>
+                </div>
+            </div>
+            <div id="mainapp">
+                <div id="chatlist">
+                    {% for room in rooms %}
+                        <div class="chatbanner">
+                            <p class="roomname" data-room-id="{{ room.id }}">{{ room.name }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div id="chatscreen">
+                    <div id="messages">
+                    </div>
+                    <div id="textentry">
+                        <textarea type="text" id="textmessage" name="textmessage" placeholder="Type a message"></textarea>
+                        <a id="sendmessagebutton"><img id="sendmessageicon" src="/static/img/send-icon.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/script.js" charset="utf-8"></script>
+</html>

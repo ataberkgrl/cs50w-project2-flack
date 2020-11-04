@@ -4,6 +4,6 @@ Chat application web app project for CS50W course which is offered by Harvard at
 
 **This project doesn't use any database. Datas are stored in application memory.**
 
-You can visit the final product from [here] (Don't try it on mobile. I didn't make it responsive to mobile resolution.)(https://cs50wproject2ataberk.herokuapp.com/)
+You can visit the final product from [here](https://cs50wproject2ataberk.herokuapp.com/) (Don't try it on mobile. I didn't make it responsive to mobile resolution.)
 
 You can acces the details of the project from [here](https://docs.cs50.net/web/2019/x/projects/2/project2.html)
